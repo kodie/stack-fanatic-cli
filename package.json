@@ -1,0 +1,52 @@
+{
+  "name": "stack-fanatic-cli",
+  "version": "0.0.1",
+  "description": "A CLI tool for checking the progress of the badge you are tracking on your Stack Overflow profile.",
+  "keywords": [
+    "badge",
+    "cli",
+    "command",
+    "exchange",
+    "fanatic",
+    "google",
+    "interface",
+    "line",
+    "overflow",
+    "profile",
+    "progress",
+    "puppeteer",
+    "stack",
+    "stackoverflow",
+    "tool"
+  ],
+  "author": {
+    "name": "Kodie Grantham",
+    "email": "kodie.grantham@gmail.com",
+    "url": "https://kodieg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kodie/stack-fanatic-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kodie/stack-fanatic-cli/issues"
+  },
+  "homepage": "https://github.com/kodie/stack-fanatic-cli",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "stack-fanatic": "index.js"
+  },
+  "scripts": {
+    "test": "standard"
+  },
+  "dependencies": {
+    "boxen": "^4.1.0",
+    "minimist": "^1.2.0",
+    "prompts": "^2.1.0",
+    "stack-fanatic": "^0.0.1"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  }
+}
