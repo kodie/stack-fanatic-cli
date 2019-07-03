@@ -33,7 +33,7 @@ $ stack-fanatic --help
     --login-password  The password for the StackOverflow account that you would like to log in to
     --site            The URL for the Stack Exchange site that you would like to pull badge info from
                       Should include the protocol at the beginning and no trailing slash (Defaults to "https://stackoverflow.com")
-    --user-data-dir   Directory to save session data and cache to (Defaults to ""./userData")
+    --user-data-dir   Directory to save session data and cache to (Defaults to "./userData")
 
   Examples
     $ stack-fanatic
@@ -41,6 +41,8 @@ $ stack-fanatic --help
     $ stack-fanatic --login-email=example@gmail.com --login-password=password1234
 
 ```
+
+*Note: When you first run stack-fanatic, you will be prompted for a login email and password if you do not supply one using the options.*
 
 ### Example Response
 
