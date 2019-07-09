@@ -68,10 +68,15 @@ Fanatic (Gold) - 2/100 (2%)
 Install this tool on a server and set up a cron job to run it on a daily basis to get the [Enthusiast](https://stackoverflow.com/help/badges/71/enthusiast) and [Fanatic](https://stackoverflow.com/help/badges/83/fanatic) badges:
 
   1. Run `npm install --global stack-fanatic-cli`
+
     * If installing on Ubuntu Trusty, you'll need the `libnss3` package
+
   2. Run `stack-fanatic`
+
     * It'll ask you to log in initially, after that your session data will be saved
+
   3. Find out where your node and stack-fanatic executables are located by running `which node` and `which stack-fanatic`
+
   4. Run `crontab -e` and add something like the following: *(of course replacing the email address and executable paths with your own)*
 
 This will check my badge progress every day at noon and email me the results:
