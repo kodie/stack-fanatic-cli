@@ -1,6 +1,6 @@
 {
   "name": "stack-fanatic-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A CLI tool for checking the progress of the badge you are tracking on your Stack Overflow profile.",
   "keywords": [
     "badge",

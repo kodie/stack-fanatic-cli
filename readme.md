@@ -31,9 +31,10 @@ $ stack-fanatic --help
     --debug           Output debugging info in the console
     --login-email     The email address asssociated with the Stack Overflow account that you would like to log in to
     --login-password  The password for the StackOverflow account that you would like to log in to
+    --plain           Only display the badge status text, no fancy box
     --site            The URL for the Stack Exchange site that you would like to pull badge info from
                       Should include the protocol at the beginning and no trailing slash (Defaults to "https://stackoverflow.com")
-    --user-data-dir   Directory to save session data and cache to (Defaults to "./userData")
+    --user-data-dir   Directory to save session data and cache to (Defaults to ""./userData")
 
   Examples
     $ stack-fanatic

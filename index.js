@@ -10,7 +10,9 @@ const check = async opts => {
   await stackFanatic
     .check(opts)
     .then(res => {
-      console.log(boxen(`${res.badge} (${res.type}) - ${res.now}/${res.max} (${res.percent}%)`, { padding: 1 }))
+      let status = `${res.badge} (${res.type}) - ${res.now}/${res.max} (${res.percent}%)`
+      if (!opts.plain) status = boxen(status, { padding: 1 })
+      console.log(status)
     })
     .catch(async err => {
       if (err.message === 'Not logged in') {
@@ -63,6 +65,7 @@ if (argv['help']) {
     --debug           Output debugging info in the console
     --login-email     The email address asssociated with the Stack Overflow account that you would like to log in to
     --login-password  The password for the StackOverflow account that you would like to log in to
+    --plain           Only display the badge status text, no fancy box
     --site            The URL for the Stack Exchange site that you would like to pull badge info from
                       Should include the protocol at the beginning and no trailing slash (Defaults to "https://stackoverflow.com")
     --user-data-dir   Directory to save session data and cache to (Defaults to ""./userData")
@@ -87,6 +90,7 @@ check({
   debug: argv['debug'],
   loginEmail: argv['login-email'],
   loginPassword: argv['login-password'],
+  plain: argv['plain'],
   puppeteerOpts: {
     userDataDir: argv['user-data-dir'] ? argv['user-data-dir'] === 'false' ? false : argv['user-data-dir'] : './userData'
   },
