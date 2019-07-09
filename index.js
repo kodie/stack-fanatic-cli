@@ -56,6 +56,7 @@ if (argv['help']) {
   Usage
     $ stack-fanatic
       [--debug]
+      [--plain]
       [--login-email=example@gmail.com]
       [--login-password=password1345]
       [--site=https://stackoverflow.com]

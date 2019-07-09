@@ -22,6 +22,7 @@ $ stack-fanatic --help
   Usage
     $ stack-fanatic
       [--debug]
+      [--plain]
       [--login-email=example@gmail.com]
       [--login-password=password1345]
       [--site=https://stackoverflow.com]
@@ -55,10 +56,34 @@ $ stack-fanatic --help
 └─────────────────────────────────┘
 ```
 
-#### with --plain option
+#### with the `--plain` option
 ```
 Fanatic (Gold) - 2/100 (2%)
 ```
+
+## Cheater, Cheater, Pumpkin Eater
+
+**DISCLAIMER: I take no responsibility for any consequences that happen as a result of using this tool in the following way:**
+
+Install this tool on a server and set up a cron job to run it on a daily basis to get the [Enthusiast](https://stackoverflow.com/help/badges/71/enthusiast) and [Fanatic](https://stackoverflow.com/help/badges/83/fanatic) badges:
+
+  1. Run `npm install --global stack-fanatic-cli`
+    * If installing on Ubuntu Trusty, you'll need the `libnss3` package
+  2. Run `stack-fanatic`
+    * It'll ask you to log in initially, after that your session data will be saved
+  3. Find out where your node and stack-fanatic executables are located by running `which node` and `which stack-fanatic`
+  4. Run `crontab -e` and add something like the following: *(of course replacing the email address and executable paths with your own)*
+
+This will check my badge progress every day at noon and email me the results:
+
+```
+MAILTO=youremail@gmail.com
+0 12 * * * TERM=dumb /srv/users/serverpilot/.nvm/versions/node/v8.16.0/bin/node /srv/users/serverpilot/.nvm/versions/node/v8.16.0/bin/stack-fanatic --plain
+```
+
+*`TERM=dumb` is required at the begining of the command to get rid of any errors resulting from the process not running in a real terminal and `--plain` is required at the end of the command so that you don't end up with a bunch of invalid characters in your email as a result of the fancy box that is printed in the terminal.*
+
+Read more about crontab [here](https://www.adminschoice.com/crontab-quick-reference).
 
 ## Related
 
