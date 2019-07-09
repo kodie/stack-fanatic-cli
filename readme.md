@@ -55,6 +55,11 @@ $ stack-fanatic --help
 └─────────────────────────────────┘
 ```
 
+#### w/ --plain option
+```
+Fanatic (Gold) - 2/100 (2%)
+```
+
 ## Related
 
 * [stack-fanatic](https://github.com/kodie/stack-fanatic) - The module that powers this tool
