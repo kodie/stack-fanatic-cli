@@ -55,7 +55,7 @@ $ stack-fanatic --help
 └─────────────────────────────────┘
 ```
 
-#### w/ --plain option
+#### with --plain option
 ```
 Fanatic (Gold) - 2/100 (2%)
 ```
